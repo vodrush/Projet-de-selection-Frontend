@@ -17,7 +17,7 @@ function App() {
   ];
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/v1/stats')
+    fetch('https://carambar-api-at3c.onrender.com/api/v1/stats')
       .then(res => res.json())
       .then(data => setStats(data))
       .catch(() => setStats(null));
@@ -28,7 +28,7 @@ function App() {
     setBlague(null);
     setReponseVisible(false);
 
-    fetch('http://localhost:3000/api/v1/blagues/aleatoire')
+    fetch('https://carambar-api-at3c.onrender.com/api/v1/blagues/aleatoire')
       .then(res => {
         if (!res.ok) throw new Error('Reponse reseau non ok');
         return res.json();
@@ -57,7 +57,7 @@ function App() {
           <a href="#" className="logo">Carambar & co</a>
           <nav className={menuOuvert ? 'nav-ouverte' : ''}>
             <a href="#api" onClick={() => setMenuOuvert(false)}>API</a>
-            <a href="http://localhost:3000/api-docs" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOuvert(false)}>Swagger</a>
+            <a href="https://carambar-api-at3c.onrender.com/api-docs" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOuvert(false)}>Swagger</a>
             <a href="#" onClick={() => setMenuOuvert(false)}>GitHub</a>
           </nav>
           <span className="slogan">La bonne humeur, en un clic.</span>
@@ -127,7 +127,7 @@ function App() {
               <p>/blagues/aleatoire → une surprise à chaque clic</p>
             </div>
           </div>
-          <a href="http://localhost:3000/api-docs" target="_blank" rel="noopener noreferrer" className="lien-swagger">
+          <a href="https://carambar-api-at3c.onrender.com/api-docs" target="_blank" rel="noopener noreferrer" className="lien-swagger">
             Voir la doc Swagger
           </a>
         </div>
@@ -184,7 +184,7 @@ function App() {
           <p>
             <a href="#">Repo Front (GitHub)</a> | 
             <a href="#">Repo Back (GitHub)</a> | 
-            <a href="http://localhost:3000/api-docs" target="_blank" rel="noopener noreferrer">Swagger API</a> | 
+            <a href="https://carambar-api-at3c.onrender.com/api-docs" target="_blank" rel="noopener noreferrer">Swagger API</a> | 
             <a href="#">Render (API déployée)</a>
           </p>
         </div>
