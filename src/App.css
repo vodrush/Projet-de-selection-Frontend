@@ -1,0 +1,307 @@
+/* --- GENERAL & POLICES --- */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Quicksand:wght@400;700&display=swap');
+
+/* --- RESET DE BASE --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --couleur-jaune: #ffc900;
+  --couleur-rouge: #d4292f;
+  --couleur-creme: #fff9e6;
+  --couleur-texte: #333;
+  --police-titre: 'Luckiest Guy', cursive;
+  --police-texte: 'Quicksand', sans-serif;
+}
+
+body {
+  font-family: var(--police-texte);
+  background-color: var(--couleur-creme);
+  color: var(--couleur-texte);
+  line-height: 1.6;
+}
+
+.page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; <-- C'EST CETTE LIGNE QUI POSAIT PROBLÈME */
+}
+
+/* --- HEADER --- */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-family: var(--police-titre);
+  color: var(--couleur-rouge);
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+header nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--couleur-texte);
+  font-weight: bold;
+}
+
+header .slogan {
+  font-style: italic;
+}
+
+/* --- STRUCTURES COMMUNES --- */
+main {
+  width: 100%;
+}
+
+section {
+  width: 100%;
+  padding: 60px 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.contenu-centre {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: var(--police-titre);
+  color: var(--couleur-rouge);
+}
+
+h1 { font-size: 3.5rem; margin-top: 0; margin-bottom: 10px; }
+h2 { font-size: 2.5rem; margin-top: 0; margin-bottom: 20px; }
+
+/* --- HERO --- */
+.hero {
+  background-color: var(--couleur-jaune);
+  min-height: 70vh;
+  align-items: center;
+}
+
+.hero p { font-size: 1.2rem; }
+.hero small { margin-top: 15px; }
+
+.cta-principal {
+  background-color: var(--couleur-rouge);
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  font-family: var(--police-titre);
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cta-principal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}
+
+/* --- ZONE DE LA BLAGUE --- */
+.blague-zone {
+  background-color: #fff;
+}
+
+.carte-blague {
+  background-color: var(--couleur-creme);
+  padding: 30px;
+  border-radius: 15px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px dashed var(--couleur-rouge);
+  font-size: 1.2rem;
+}
+
+.carte-blague .question { font-weight: bold; }
+.carte-blague .reponse { font-style: italic; color: var(--couleur-rouge); margin-top: 15px; }
+
+.cta-secondaire {
+  background-color: var(--couleur-rouge);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+.cta-secondaire:hover {
+  transform: scale(1.05);
+}
+
+.actions-secondaires {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+.actions-secondaires button {
+  background: none;
+  border: 2px solid var(--couleur-rouge);
+  color: var(--couleur-rouge);
+  padding: 8px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s, color 0.2s;
+}
+.actions-secondaires button:hover {
+  background-color: var(--couleur-rouge);
+  color: white;
+}
+
+/* --- BANDEAU API --- */
+.bandeau-api {
+  background-color: var(--couleur-rouge);
+  color: white;
+}
+.bandeau-api h2 { color: white; }
+.bandeau-api .etapes {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+  width: 100%;
+}
+.lien-swagger {
+  background-color: white;
+  color: var(--couleur-rouge);
+  padding: 10px 25px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* --- AUTRES SECTIONS --- */
+.section-endpoints { background-color: #fff; }
+.section-endpoints ul { list-style: none; padding: 0; }
+.section-endpoints li { margin: 10px 0; }
+.section-endpoints code { background-color: #eee; padding: 3px 6px; border-radius: 4px; }
+
+.section-stats { background-color: var(--couleur-jaune); }
+
+.section-faq { background-color: #fff; }
+.section-faq h4 { margin-bottom: 5px; }
+.section-faq p { margin-top: 0; }
+
+/* --- FOOTER --- */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  background-color: var(--couleur-texte);
+  color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+footer a {
+  color: var(--couleur-jaune);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* --- RESPONSIVE & MENU HAMBURGER --- */
+.bouton-hamburger {
+  display: none; /* Caché par défaut sur grand écran */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001; /* Pour être au-dessus de tout */
+}
+
+.bouton-hamburger .barre {
+  width: 25px;
+  height: 3px;
+  background-color: var(--couleur-texte);
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animation du hamburger en croix */
+.bouton-hamburger.ouvert .barre:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.bouton-hamburger.ouvert .barre:nth-child(2) {
+  opacity: 0;
+}
+.bouton-hamburger.ouvert .barre:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+
+@media (max-width: 768px) {
+  header .slogan {
+    display: none; /* On cache le slogan sur petit écran */
+  }
+
+  .bouton-hamburger {
+    display: block; /* On affiche le bouton */
+  }
+
+  header nav {
+    display: none; /* On cache la nav par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header nav.nav-ouverte {
+    display: flex; /* On affiche la nav quand le menu est ouvert */
+  }
+
+  header nav a {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    color: var(--couleur-rouge);
+  }
+
+  .bandeau-api .etapes {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+}
