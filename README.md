@@ -4,11 +4,11 @@ Bienvenue sur le projet de mini-application de blagues Carambar & Co ! Ce projet
 
 ## 🚀 Liens Rapides
 
-- **Documentation de l'API (Swagger) :** []
-- **Dépôt GitHub (Frontend) :** `[]`
-- **Dépôt GitHub (Backend) :** `[]`
-- **Application Frontend Déployée (GitHub Pages) :** `[]`
-- **API Backend Déployée (Render) :** `[]`
+- **Documentation de l'API (Swagger) :** [https://carambar-api-at3c.onrender.com/api-docs/]
+- **Dépôt GitHub (Frontend) :** `[https://github.com/vodrush/Projet-de-selection-Frontend]`
+- **Dépôt GitHub (Backend) :** `[https://github.com/vodrush/Projet-de-selection-Backend]`
+- **Application Frontend Déployée (GitHub Pages) :** `[https://vodrush.github.io/Projet-de-selection-Frontend/]`
+- **API Backend Déployée (Render) :** `[https://carambar-api-at3c.onrender.com]`
 
 ---
 
